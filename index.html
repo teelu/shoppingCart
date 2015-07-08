@@ -11,10 +11,42 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/application.js"></script>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="css/custom.css" rel="stylesheet">
   </head>
   <body>
-    
+    <div class="container">
+      <section class="col-xs-12">
+        <h1 class="text-center">Shopping Cart</h1>
+        <table class="items col-xs-12">
+        <thead>
+            <tr>
+              <th class="text-left">Description</th>
+              <th class="text-right">Cost</th>
+              <th class="text-left">Quantity</th>
+              <th class="text-right">Item Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="listItem">
+              <td>Test Item 1</td>
+              <td class="text-right price">$25.00</td>
+              <td><input class="col-lg-10 updateCart"><button class="btn btn-xs"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button></td>
+              <td class="text-right subtotal">0</td>
+              <td><button class="btn btn-xs"><span class="glyphicon glyphicon-remove-circle" class="removeItem"></span></button></td>
+            </tr>
+           
+            <tr class="listAdd">
+              <td><input id="addItemName"></td>
+              <td class="text-right"><input id="addItemCost"></td>
+              <td></td>
+              <td></td>
+              <td><button class="btn btn-xs" id="addItem"><span class="glyphicon glyphicon-plus-sign"></span></button></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 id="subtotalDisplay">Subtotal:0</h3>
+      </section>
+    </div>
   </body>
 </html>
